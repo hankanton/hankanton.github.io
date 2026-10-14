@@ -17,12 +17,15 @@
 <main>
   <h1>Datenschutzerklärung</h1>
   <p class="muted">für die App „Rechnungslupe: E-Rechnung“ (iPhone, iPad, Mac) und diese Webseite ·
-  Stand: <!-- STAND -->8. Oktober 2026</p>
+  Stand: <!-- STAND -->14. Oktober 2026</p>
 
   <div class="card">
     <p><strong>Kurz gesagt:</strong> Die App verarbeitet Ihre Rechnungen ausschließlich auf Ihrem Gerät. Ich
     erhalte keine Rechnungen, keine Rechnungsinhalte und keine Daten über Ihre Nutzung der App. Es gibt kein Konto,
-    keine Werbung, kein Tracking und keine Analyse-Dienste. Die App baut keine Netzwerkverbindung auf.</p>
+    keine Werbung, kein Tracking und keine Analyse-Dienste. Die App selbst baut keine Netzwerkverbindung auf.
+    Ab Version 1.1 gibt es zwei Ausnahmen, die nur greifen, wenn Sie sie nutzen: den Kauf von „Rechnungslupe Pro“
+    über den App Store und den optionalen Abgleich Ihres Archivs über Ihr eigenes iCloud. Beides läuft über Dienste
+    von Apple; ich erhalte dabei weder Rechnungen noch Daten über Sie.</p>
   </div>
 
   <h2>1. Verantwortlicher</h2>
@@ -38,14 +41,38 @@
 
   <h3>Rechnungen, die Sie öffnen</h3>
   <p>Wenn Sie eine Rechnung öffnen (aus Mail, der Dateien-App, dem Finder oder über „Rechnung öffnen“), liest
-  die App die Datei, um sie anzuzeigen. Das geschieht ausschließlich auf Ihrem Gerät. Die Datei wird nicht
-  übertragen, nicht ausgewertet und nicht verändert. Die App legt keine eigene Sammlung Ihrer Rechnungen an.
-  Kopien, die das Betriebssystem beim Öffnen aus einer anderen App im Speicherbereich der App ablegt, löscht
+  die App die Datei, um sie anzuzeigen und auf Rechen- und Formfehler zu prüfen (Plausibilitätsprüfung). Das
+  geschieht ausschließlich auf Ihrem Gerät. Die Datei wird nicht übertragen und nicht verändert. Die App speichert
+  Rechnungen nur, wenn Sie sie selbst ins Archiv legen (siehe unten). Kopien, die das Betriebssystem beim Öffnen aus einer anderen App im Speicherbereich der App ablegt, löscht
   die App wieder.</p>
 
-  <h3>PDF-Export</h3>
-  <p>Das PDF der Ansicht wird auf Ihrem Gerät erzeugt. Wohin Sie es sichern, drucken oder teilen, entscheiden
-  Sie; die App übermittelt es nicht von sich aus.</p>
+  <h3>PDF-Export, Prüfbericht und Paket für die Steuerberatung</h3>
+  <p>Das PDF der Ansicht, der Prüfbericht und das ZIP-Paket für die Steuerberatung (die beiden letzten ab Version
+  1.1) werden auf Ihrem Gerät erzeugt. Wohin Sie sie sichern, drucken oder teilen, entscheiden Sie; die App
+  übermittelt sie nicht von sich aus.</p>
+
+  <h3>Archiv (ab Version 1.1)</h3>
+  <p>Legen Sie eine Rechnung mit „Ins Archiv“ ab, speichert die App die unveränderte Original-Datei und für Suche,
+  Filter und Export einige Angaben daraus (Verkäufer, Rechnungsnummer, Datum, Beträge, Währung, Umsatzsteuer-ID,
+  IBAN) sowie Ihre Notiz zur Rechnung. Das Archiv liegt auf Ihrem Gerät im Speicherbereich der App. Sie können
+  einzelne Rechnungen jederzeit löschen; mit der App wird das Archiv auf dem Gerät gelöscht.</p>
+
+  <h3>Abgleich über iCloud (ab Version 1.1, freiwillig)</h3>
+  <p>Der Abgleich ist ausgeschaltet, bis Sie ihn im Archiv einschalten. Dann speichert die App die Rechnungen aus
+  dem Archiv (Original-Datei, Dateiname, Ablagedatum und Notiz) in der privaten Datenbank Ihres iCloud-Kontos
+  (CloudKit), um sie zwischen Ihren Geräten mit derselben Apple-ID abzugleichen. Apple stellt diesen Speicher in
+  eigener Verantwortung bereit; es gelten die Bedingungen und die Datenschutzrichtlinie von Apple. Ich habe auf
+  diese Daten keinen Zugriff. Damit Änderungen schnell auf Ihren anderen Geräten ankommen, schickt Apple Ihren
+  Geräten stille Push-Mitteilungen; sie werden nicht angezeigt und enthalten keine Rechnungsinhalte.</p>
+  <p>Beim Ausschalten fragt die App, ob die Kopien in iCloud gelöscht werden sollen; die Rechnungen auf dem Gerät
+  bleiben in jedem Fall erhalten. Löschen Sie die App, bleiben die Kopien in iCloud bestehen. Sie können sie in
+  den Einstellungen unter „Apple-Account“ → „iCloud“ → „Speicher verwalten“ löschen.</p>
+
+  <h3>GiroCode, Skonto-Erinnerung und Quick Look (ab Version 1.1)</h3>
+  <p>Den GiroCode für Ihre Banking-App erzeugt die App auf Ihrem Gerät aus den Zahlungsangaben der Rechnung. Eine
+  Skonto-Erinnerung richtet die App als Mitteilung des Betriebssystems ein, nachdem Sie Mitteilungen erlaubt
+  haben; die Mitteilung enthält Rechnungsnummer, Verkäufer, Betrag und Frist und bleibt auf Ihrem Gerät. Die
+  Vorschau im Finder des Macs (Quick Look) erzeugt die lesbare Rechnung ebenfalls auf Ihrem Mac.</p>
 
   <h3>Auf dem Gerät gespeicherte Einstellungen</h3>
   <p>Die App speichert auf Ihrem Gerät:</p>
@@ -53,8 +80,13 @@
     <li>Ihre Anzeige-Einstellung, ob die Nummern der Rechnungsfelder (BT-Nummern) angezeigt werden;</li>
     <li>die Anzahl der erfolgreich geöffneten Rechnungen und die App-Version, in der zuletzt um eine Bewertung
       gebeten wurde – ohne Rechnungsinhalte. Damit fragt die App frühestens nach der dritten Rechnung und
-      höchstens einmal je Version, ob Sie sie bewerten möchten.</li>
+      höchstens einmal je Version, ob Sie sie bewerten möchten;</li>
+    <li>ab Version 1.1: ob „Rechnungslupe Pro“ freigeschaltet ist, ob der iCloud-Abgleich eingeschaltet ist, und
+      den technischen Stand des Abgleichs (Kennungen der Rechnungen in Form von Prüfsummen, ohne Inhalte).</li>
   </ul>
+  <p>Für die Fehlersuche schreibt die App knappe Einträge zum iCloud-Abgleich in das Systemprotokoll des Geräts
+  (gekürzte Prüfsummen und Anzahlen, keine Rechnungsinhalte oder Notizen). Das Protokoll verlässt das Gerät nicht
+  von sich aus.</p>
   <p>Diese Angaben verlassen Ihr Gerät nicht, außer als Teil Ihrer eigenen Gerätebackups. Sie werden gelöscht,
   wenn Sie die App löschen.</p>
 
@@ -67,6 +99,10 @@
   Daten in eigener Verantwortung; es gilt die <a href="https://www.apple.com/de/legal/privacy/">Datenschutzrichtlinie
   von Apple</a>. Von Apple erhalte ich nur zusammengefasste Zahlen, etwa zu Downloads und Verkäufen, aber keine
   Namen oder Kontaktdaten der Käufer.</p>
+  <p>Ab Version 1.1 können Sie „Rechnungslupe Pro“ als einmaligen In-App-Kauf erwerben. Kauf, Bezahlung,
+  Familienfreigabe und Wiederherstellung von Käufen wickelt Apple ab. Ich erhalte dabei keine Namen und keine
+  Zahlungsdaten. Die App fragt beim Betriebssystem ab, ob Pro gekauft wurde, und merkt sich das Ergebnis auf dem
+  Gerät, damit Pro auch ohne Internet funktioniert.</p>
   <p>Wenn Sie in den Einstellungen Ihres Geräts erlaubt haben, Analysedaten mit App-Entwicklern zu teilen, stellt
   Apple mir Absturzberichte und zusammengefasste Nutzungsstatistiken zur Verfügung. Diese enthalten keine
   Rechnungsinhalte; ich kann sie keiner Person zuordnen. Ich nutze sie nur, um Fehler zu beheben. Sie können die
@@ -106,11 +142,10 @@
   können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO), zum Beispiel bei der Behörde
   Ihres Wohnorts.</p>
   <p>Daten aus der App selbst kann ich weder beauskunften noch löschen, weil ich sie nicht erhalte; sie liegen nur
-  auf Ihrem Gerät.</p>
+  auf Ihren Geräten und – wenn Sie den Abgleich nutzen – in Ihrem iCloud.</p>
 
   <h2>7. Änderungen</h2>
-  <p>Ich passe diese Erklärung an, wenn sich die App ändert – etwa wenn eine spätere Version ein optionales
-  Archiv mit Synchronisierung über iCloud anbietet. Es gilt die jeweils hier veröffentlichte Fassung.</p>
+  <p>Ich passe diese Erklärung an, wenn sich die App ändert. Es gilt die jeweils hier veröffentlichte Fassung.</p>
 </main>
 <footer class="site">
   <a href="../impressum.html">Impressum</a>

@@ -17,14 +17,17 @@
 <main>
   <h1>Privacy policy</h1>
   <p class="muted">for the “Rechnungslupe: E-Rechnung” app (iPhone, iPad, Mac) and this website ·
-  Last updated: <!-- STAND -->8 October 2026</p>
+  Last updated: <!-- STAND -->14 October 2026</p>
   <p class="small muted">This is a translation for convenience. In case of doubt, the
   <a href="../datenschutz.html" lang="de">German version</a> applies.</p>
 
   <div class="card">
     <p><strong>In short:</strong> The app processes your invoices solely on your device. I receive no invoices, no
     invoice contents and no data about how you use the app. There is no account, no advertising, no tracking and
-    no analytics service. The app makes no network connection.</p>
+    no analytics service. The app itself makes no network connection. From version 1.1 there are two exceptions,
+    which only apply if you use them: buying “Rechnungslupe Pro” through the App Store, and the optional syncing of
+    your archive via your own iCloud. Both run through Apple services; I receive neither invoices nor data about
+    you.</p>
   </div>
 
   <h2>1. Controller</h2>
@@ -40,13 +43,38 @@
 
   <h3>Invoices you open</h3>
   <p>When you open an invoice (from Mail, the Files app, the Finder or via “Open invoice”), the app reads the file
-  in order to display it. This happens solely on your device. The file is not transmitted, analysed or changed.
-  The app does not keep its own collection of your invoices. Copies that the operating system places in the app’s
+  in order to display it and check it for calculation and format errors (plausibility check). This happens solely
+  on your device. The file is not transmitted or changed. The app stores invoices only if you add them to the
+  archive yourself (see below). Copies that the operating system places in the app’s
   storage when you open a file from another app are deleted by the app again.</p>
 
-  <h3>PDF export</h3>
-  <p>The PDF of the view is created on your device. You decide where to save, print or share it; the app does not
-  transmit it of its own accord.</p>
+  <h3>PDF export, check report and package for your tax adviser</h3>
+  <p>The PDF of the view, the check report and the ZIP package for your tax adviser (the latter two from version
+  1.1) are created on your device. You decide where to save, print or share them; the app does not transmit them
+  of its own accord.</p>
+
+  <h3>Archive (from version 1.1)</h3>
+  <p>If you add an invoice with “Add to archive”, the app stores the unchanged original file and, for searching,
+  filtering and exporting, some details from it (seller, invoice number, date, amounts, currency, VAT ID, IBAN),
+  together with your note on the invoice. The archive is kept on your device in the app’s storage. You can delete
+  individual invoices at any time; deleting the app deletes the archive on the device.</p>
+
+  <h3>Syncing via iCloud (from version 1.1, optional)</h3>
+  <p>Syncing is off until you turn it on in the archive. The app then stores the invoices in the archive (original
+  file, file name, date added and note) in the private database of your iCloud account (CloudKit) in order to sync
+  them between your devices signed in with the same Apple Account. Apple provides this storage under its own
+  responsibility; Apple’s terms and privacy policy apply. I have no access to this data. So that changes reach your
+  other devices quickly, Apple sends your devices silent push notifications; these are not displayed and contain no
+  invoice contents.</p>
+  <p>When you turn syncing off, the app asks whether the copies in iCloud should be deleted; the invoices on the
+  device are kept in any case. If you delete the app, the copies in iCloud remain. You can delete them in Settings
+  under “Apple Account” → “iCloud” → “Manage Storage”.</p>
+
+  <h3>GiroCode, discount reminder and Quick Look (from version 1.1)</h3>
+  <p>The app creates the GiroCode for your banking app on your device from the invoice’s payment details. A
+  discount reminder is set up as an operating-system notification after you have allowed notifications; it contains
+  the invoice number, seller, amount and deadline and stays on your device. The Finder preview on the Mac (Quick
+  Look) also creates the readable invoice on your Mac.</p>
 
   <h3>Settings stored on your device</h3>
   <p>The app stores on your device:</p>
@@ -54,8 +82,12 @@
     <li>your display setting for whether the numbers of the invoice fields (BT numbers) are shown;</li>
     <li>the number of invoices opened successfully and the app version in which you were last asked for a rating –
       without any invoice contents. This means the app asks whether you would like to rate it no earlier than after
-      the third invoice and at most once per version.</li>
+      the third invoice and at most once per version;</li>
+    <li>from version 1.1: whether “Rechnungslupe Pro” is unlocked, whether iCloud syncing is on, and the technical
+      sync state (invoice identifiers in the form of checksums, without contents).</li>
   </ul>
+  <p>For troubleshooting, the app writes brief entries about iCloud syncing to the device’s system log (shortened
+  checksums and counts, no invoice contents or notes). The log does not leave the device of its own accord.</p>
   <p>This information does not leave your device, except as part of your own device backups. It is deleted when
   you delete the app.</p>
 
@@ -68,6 +100,10 @@
   downloads, updates and purchases; <a href="https://www.apple.com/uk/legal/privacy/">Apple’s privacy policy</a>
   applies. From Apple, I receive only aggregated figures, for example on downloads and sales, but no names or
   contact details of buyers.</p>
+  <p>From version 1.1 you can buy “Rechnungslupe Pro” as a one-off in-app purchase. Apple handles the purchase,
+  payment, Family Sharing and restoring purchases. I receive no names and no payment details. The app asks the
+  operating system whether Pro has been purchased and remembers the result on the device so that Pro also works
+  offline.</p>
   <p>If you have allowed analytics data to be shared with app developers in your device settings, Apple provides me
   with crash reports and aggregated usage statistics. These contain no invoice contents, and I cannot attribute
   them to any person. I use them only to fix bugs. You can turn sharing off at any time in Settings under
@@ -105,11 +141,10 @@
   complaint with a data protection supervisory authority (Art. 77 GDPR), for example the authority where you
   live.</p>
   <p>I cannot provide information about, or delete, data held in the app itself, because I do not receive it; it
-  exists only on your device.</p>
+  exists only on your devices and – if you use syncing – in your iCloud.</p>
 
   <h2>7. Changes</h2>
-  <p>I will update this policy when the app changes – for example if a later version offers an optional archive
-  synchronised via iCloud. The version published here applies.</p>
+  <p>I will update this policy when the app changes. The version published here applies.</p>
 </main>
 <footer class="site">
   <a href="../../impressum.html">Legal notice (Impressum)</a>
