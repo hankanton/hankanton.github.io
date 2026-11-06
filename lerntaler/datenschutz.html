@@ -50,6 +50,9 @@
   Sie diese in den iOS-Einstellungen nutzen; dafür gelten die Bedingungen von Apple. Sitzungsschlüssel,
   Fotoschlüssel und Wiederherstellungscode liegen dagegen im Schlüsselbund nur dieses Geräts und werden nicht
   mitgesichert.</p>
+  <p>Auf diese Daten habe ich keinen Zugriff; ich erhalte sie nicht und verarbeite sie nicht. Die App speichert sie
+  auf Ihrem Gerät, weil das für die von Ihnen gewünschte Funktion unbedingt erforderlich ist (§ 25 Abs. 2 Nr. 2
+  TDDDG).</p>
   <p>Kamera und Fotomediathek nutzt die App nur, wenn Sie selbst ein Foto aufnehmen oder auswählen oder einen
   Kopplungscode scannen. Face ID ist optional und wird vom Betriebssystem geprüft; die App erhält dabei keine
   biometrischen Daten. Das Mikrofon wird nicht verwendet.</p>
@@ -58,9 +61,9 @@
   <p>Wer Lerntaler auf mehreren Geräten nutzen möchte, schließt das Abo „Lerntaler Plus“ ab und legt freiwillig
   ein Familienkonto an. Dafür verarbeite ich:</p>
   <ul>
-    <li><strong>Abo-Status:</strong> Damit Plus für alle Geräte der Familie gilt, sendet die App die von Apple
-      signierte Kaufbestätigung an den Server; Verlängerungen, Kündigungen und Erstattungen meldet Apple dem Server
-      direkt (App Store Server Notifications). Gespeichert werden Produkt, Laufzeit, Status und die
+    <li><strong>Abo-Status:</strong> Damit Plus für alle Geräte der Familie gilt, meldet die App die
+      Transaktionskennung des Kaufs an den Server, und der Server fragt den Stand des Abos direkt bei Apple ab;
+      Verlängerungen, Kündigungen und Erstattungen meldet Apple dem Server direkt (App Store Server Notifications). Gespeichert werden Produkt, Laufzeit, Status und die
       Transaktionskennung von Apple – keine Namen und keine Zahlungsdaten.</li>
     <li><strong>Anmeldung mit Apple:</strong> eine pseudonyme Apple-Nutzerkennung, um das Elternkonto
       wiederzuerkennen. Name und E-Mail-Adresse fragt die App bei Apple nicht ab; ich speichere beides nicht. Für die
@@ -74,21 +77,57 @@
       verschlüsselt</strong>. Der Schlüssel liegt nur auf den Geräten der Familie; ich kann die Fotos nicht ansehen.
       Aufgabenfotos werden nach der von den Eltern gewählten Frist (Standard 30 Tage) automatisch gelöscht.</li>
     <li><strong>Geräte:</strong> eine zufällige Gerätekennung, ein Gerätename, ein Sitzungsschlüssel und, falls
-      Mitteilungen erlaubt sind, ein Token für Push-Mitteilungen.</li>
+      Mitteilungen erlaubt sind, ein Token für Push-Mitteilungen. Sitzungen laufen nach 180 Tagen ohne Nutzung
+      ab.</li>
     <li><strong>Verbindungsdaten:</strong> Zum Schutz vor Missbrauch (Begrenzung von Anfragen, insbesondere beim
       Koppeln) speichere ich die IP-Adresse nicht im Klartext, sondern nur als mit einem geheimen Schlüssel gebildeten
       Prüfwert, und das höchstens rund zwei Stunden. Technische Protokolle des Hostinganbieters werden nach kurzer
       Zeit automatisch gelöscht.</li>
   </ul>
-  <p>Rechtsgrundlage ist die Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO), für die Missbrauchsabwehr mein
-  berechtigtes Interesse an einem sicheren Betrieb (Art. 6 Abs. 1 lit. f DSGVO). Bei Kindern unter 16 Jahren
-  handeln die Eltern als Träger der elterlichen Sorge; die Einrichtung und Kopplung von Kindergeräten erfolgt
-  ausschließlich durch die Eltern.</p>
-  <p>Die Daten des Familienkontos speichere ich, solange das Familienkonto besteht. Wird es gelöscht
-  („Familienkonto löschen“), entferne ich alle Daten einschließlich der Fotos, Geräte und Anmeldungen unverzüglich.
-  Ein weiteres Elternteil kann mit „Mein Konto löschen“ jederzeit nur seine eigene Anmeldung und seine Geräte
-  löschen; das Familienkonto der anderen bleibt dann bestehen. In beiden Fällen widerrufe ich auch die Verbindung
-  zur Apple-ID bei Apple.</p>
+  <p><strong>Woher die Daten stammen.</strong> Die Daten Ihrer Kinder erhalte ich nicht von den Kindern selbst,
+  sondern von Ihnen als Eltern: Sie legen die Profile, Aufgaben und Belohnungen an. Was Kinder auf gekoppelten
+  Geräten eintragen (z. B. eine erledigte Aufgabe oder ein Foto), wird ebenfalls Teil des Familienkontos.</p>
+  <p><strong>Rechtsgrundlagen.</strong></p>
+  <ul>
+    <li><em>Ihre eigenen Daten als Elternteil</em> (Apple-Nutzerkennung, Geräte, Abo-Status) verarbeite ich, um den
+      Nutzungsvertrag über Lerntaler und Lerntaler Plus zu erfüllen (Art. 6 Abs. 1 lit. b DSGVO).</li>
+    <li><em>Daten Ihrer Kinder</em> (Vorname oder Spitzname, Klassenstufe, Avatare, Aufgaben, Taler, Belohnungen,
+      Sparziele, Fotos, Kindergeräte) verarbeite ich auf Grundlage berechtigter Interessen (Art. 6 Abs. 1 lit. f
+      DSGVO). Mit den Kindern selbst besteht kein Vertrag. Das berechtigte Interesse ist, den von Ihnen gewählten
+      Dienst zu erbringen, und Ihr Interesse als Eltern, Aufgaben und Belohnungen in Ihrer Familie auf mehreren
+      Geräten zu organisieren; es deckt sich mit dem Interesse Ihrer Kinder, Anerkennung für Erledigtes zu bekommen.
+      Zum Schutz der Kinder gilt: keine Werbeanzeigen, kein Tracking, kein Profiling, kein Konto und keine
+      Kontaktfunktion für Kinder, sparsame Daten, verschlüsselte Fotos und jederzeitige Löschung durch Sie. Eine
+      Einwilligung der Kinder oder für die Kinder hole ich nicht ein.</li>
+    <li><em>Abo-Status:</em> Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO); dass eine Kaufbestätigung nur einer
+      Familie zugeordnet wird, dient zusätzlich der Missbrauchsabwehr (Art. 6 Abs. 1 lit. f DSGVO).</li>
+    <li><em>Push-Mitteilungen:</em> bei Elterngeräten Art. 6 Abs. 1 lit. b, bei Kindergeräten Art. 6 Abs. 1 lit. f
+      DSGVO (wie oben).</li>
+    <li><em>Verbindungsdaten und Begrenzung von Anfragen:</em> mein berechtigtes Interesse an einem sicheren Betrieb
+      (Art. 6 Abs. 1 lit. f DSGVO).</li>
+  </ul>
+  <p>Kindergeräte richten ausschließlich die Eltern ein und koppeln sie. Beim Anlegen des Familienkontos bestätigen
+  Sie, dass Sie für die Kinder sorgeberechtigt sind oder mit Zustimmung der Sorgeberechtigten handeln.</p>
+  <p><strong>Pflicht zur Bereitstellung.</strong> Sie sind weder gesetzlich noch vertraglich verpflichtet, ein
+  Familienkonto anzulegen oder Daten bereitzustellen. Ohne Familienkonto funktioniert Lerntaler auf einem Gerät;
+  nur der Abgleich mehrerer Geräte ist dann nicht möglich. Fotos sind immer freiwillig.</p>
+  <p><strong>Speicherdauer.</strong></p>
+  <ul>
+    <li><em>Solange Lerntaler Plus aktiv ist,</em> speichere ich die Daten des Familienkontos, solange es besteht.</li>
+    <li><em>Ende von Lerntaler Plus:</em> Endet das Abo (einschließlich einer Kulanzzeit von Apple), bleibt das
+      Familienkonto noch 90 Tage bestehen, damit Sie Plus ohne Datenverlust wieder aufnehmen können; danach lösche
+      ich alle Daten des Familienkontos einschließlich Fotos und Abo-Status automatisch. Die App zeigt das Datum der
+      Löschung im Elternbereich an. Auf Ihren Geräten bleiben die Daten erhalten.</li>
+    <li><em>Keine Nutzung:</em> Hat sich zwölf Monate lang kein Gerät der Familie gemeldet und ist Plus nicht aktiv,
+      lösche ich das Familienkonto automatisch. Elternkonten ohne Familie lösche ich nach zwölf Monaten ohne
+      Anmeldung.</li>
+    <li><em>Löschung durch Sie:</em> „Familienkonto löschen“ entfernt sofort alle Daten einschließlich Fotos, Geräten,
+      Anmeldungen und Abo-Status. „Mein Konto löschen“ entfernt nur Ihre Anmeldung und Ihre Geräte; das
+      Familienkonto der anderen bleibt bestehen. In beiden Fällen widerrufe ich auch die Verbindung zur Apple-ID bei
+      Apple.</li>
+    <li><em>Aufgabenfotos</em> werden nach der gewählten Frist (Standard 30 Tage) gelöscht, Erinnerungs- und
+      Avatarfotos, wenn Sie sie löschen.</li>
+  </ul>
 
   <h2>5. Hosting</h2>
   <p>Das Familienkonto wird bei Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA (Cloudflare
@@ -96,18 +135,23 @@
   Europäischen Union. Grundlage ist der Auftragsverarbeitungsvertrag von Cloudflare. Da Cloudflare Anfragen über
   ein weltweites Netz leitet, kann es zu Übermittlungen in die USA kommen; diese stützen sich auf den
   Angemessenheitsbeschluss der EU-Kommission zum EU-US Data Privacy Framework, unter dem Cloudflare zertifiziert
-  ist, sowie ergänzend auf Standardvertragsklauseln. Über denselben Server wird auch die ausführliche Anleitung
+  ist, sowie ergänzend auf Standardvertragsklauseln; für Nutzer in der Schweiz gilt entsprechend das Swiss-U.S.
+  Data Privacy Framework. Anfragen verarbeitet Cloudflare am nächstgelegenen Standort seines Netzes, auf Reisen also
+  auch außerhalb der EU. Über denselben Server wird auch die ausführliche Anleitung
   ausgeliefert; dabei gelten die Angaben zu Verbindungsdaten.</p>
 
   <h2>6. Push-Mitteilungen</h2>
-  <p>Wenn Mitteilungen erlaubt sind, bekommen Elterngeräte kurze Hinweise wie „Lea hat eine Aufgabe eingereicht“
-  oder „Lea möchte eine Belohnung einlösen“; Kindergeräte erhalten Hinweise wie „Aufgabe freigegeben“ oder
-  „Einlösung bestätigt“ mit dem Namen der Aufgabe oder Belohnung. Die Hinweise werden über den Apple Push
+  <p>Wenn Mitteilungen erlaubt sind, bekommen Elterngeräte kurze Hinweise wie „Neue Aufgabe zur Freigabe“ oder
+  „Neuer Einlösungswunsch“; Kindergeräte erhalten Hinweise wie „Aufgabe freigegeben“ oder „Einlösung bestätigt“,
+  jeweils mit dem Namen der Aufgabe oder Belohnung. Die Hinweise enthalten keine Namen von Kindern. Die Hinweise werden über den Apple Push
   Notification Service ausgeliefert. Zur Zustellung nutze ich den Push-Dienst von Expo (650 Industries, Inc.,
-  USA) als Auftragsverarbeiter; er verarbeitet dafür das Geräte-Token und den Hinweistext einschließlich des
-  Vornamens des Kindes und speichert diese nur so lange, wie es für die Zustellung nötig ist. Expo ist unter dem
+  USA) als Auftragsverarbeiter; er verarbeitet dafür das Geräte-Token und den Hinweistext und speichert diese
+  nur so lange, wie es für die Zustellung nötig ist. Nach seinen Nutzungsbedingungen darf Expo Daten in
+  zusammengefasster oder de-identifizierter Form auch für eigene Zwecke (Verbesserung seiner Dienste) verwenden und
+  ist insoweit selbst verantwortlich. Expo ist unter dem
   EU-US Data Privacy Framework zertifiziert; die Übermittlung in die USA stützt sich darauf sowie auf
-  Standardvertragsklauseln der EU-Kommission. Mitteilungen lassen sich jederzeit in den iOS-Einstellungen
+  Standardvertragsklauseln der EU-Kommission, für Nutzer in der Schweiz auf das Swiss-U.S. Data Privacy Framework.
+  Mitteilungen lassen sich jederzeit in den iOS-Einstellungen
   abschalten; dann wird kein Token mehr gemeldet.</p>
   <p>Erinnerungen an Aufgaben plant die App lokal auf dem Gerät; dafür werden keine Daten übertragen.</p>
 
@@ -148,10 +192,25 @@
   Geräte entfernen, ihr eigenes Konto löschen und das Familienkonto vollständig löschen. Darüber hinaus haben Sie das Recht auf Auskunft,
   Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15 bis 21
   DSGVO). Dafür genügt eine E-Mail an <a href="mailto:hankanton.apps@gmx.de">hankanton.apps@gmx.de</a>.
-  Beschwerden sind bei einer Datenschutzaufsichtsbehörde möglich, etwa beim Bayerischen Landesamt für
-  Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach.</p>
+  </p>
+  <div class="card">
+    <p><strong>Widerspruchsrecht.</strong> Soweit ich Daten auf Grundlage berechtigter Interessen verarbeite (Art. 6
+    Abs. 1 lit. f DSGVO) – insbesondere Daten Ihrer Kinder und Verbindungsdaten –, können Sie aus Gründen, die sich aus
+    Ihrer besonderen Situation ergeben, jederzeit widersprechen; für Ihre Kinder üben Sie dieses Recht als Eltern aus.
+    Am einfachsten löschen Sie dazu das Familienkonto oder einzelne Inhalte im Elternbereich; eine E-Mail an
+    <a href="mailto:hankanton.apps@gmx.de">hankanton.apps@gmx.de</a> genügt ebenfalls.</p>
+  </div>
+  <p>Beschwerden sind bei einer Datenschutzaufsichtsbehörde möglich, etwa beim Bayerischen Landesamt für
+  Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach. Nutzer in der Schweiz können sich an den Eidgenössischen Datenschutz- und
+  Öffentlichkeitsbeauftragten (EDÖB) wenden.</p>
 
-  <h2>12. Änderungen</h2>
+  <h2 id="kinder">12. Für Kinder erklärt</h2>
+  <p>In Lerntaler stehen dein Name oder Spitzname, deine Aufgaben, deine Taler und deine Wünsche. Das sehen nur deine
+  Familie und die Geräte, die deine Eltern verbunden haben. Niemand sonst kann dir hier schreiben, und es gibt keine
+  Werbung. Fotos sind freiwillig. Sie werden so verschlüsselt, dass nur eure Familiengeräte sie zeigen können. Wenn
+  du etwas nicht möchtest oder eine Frage hast, sag es deinen Eltern – sie können alles ändern oder löschen.</p>
+
+  <h2>13. Änderungen</h2>
   <p>Ändern sich die App oder die beteiligten Dienste, passe ich diese Erklärung an. Es gilt die jeweils hier
   veröffentlichte Fassung.</p>
 </main>
