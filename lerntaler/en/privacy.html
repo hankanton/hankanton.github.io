@@ -16,7 +16,7 @@
 </header>
 <main>
   <h1>Privacy policy</h1>
-  <p class="muted">for the app “Lerntaler – Learn &amp; Earn” (iPhone, iPad) and this website ·
+  <p class="muted">for the app “Lerntaler: Chores &amp; Rewards” (iPhone, iPad) and this website ·
   Last updated: <!-- STAND -->6 November 2026</p>
   <p class="small muted">This is a translation for convenience. The <a href="../datenschutz.html" lang="de">German
   version</a> is authoritative.</p>
@@ -46,6 +46,9 @@
   <p>Without a family account, all data – family name, child profiles, tasks, coin entries, rewards, savings goals,
   photos and settings – is stored only on the device. No data is transferred to me. The app schedules reminders
   locally on the device.</p>
+  <p>Like all app data, this data is part of the device backup (iCloud backup or backup on a computer) if you use it
+  in the iOS settings; Apple’s terms apply. The session key, photo key and recovery code, however, are kept in the
+  keychain of this device only and are not backed up.</p>
   <p>The app only uses the camera and photo library when you take or choose a photo yourself or scan a pairing code.
   Face ID is optional and checked by the operating system; the app receives no biometric data. The microphone is not
   used.</p>
@@ -54,8 +57,9 @@
   <p>If you want to use Lerntaler on several devices, you can choose to create a family account. For this I
   process:</p>
   <ul>
-    <li><strong>Sign in with Apple:</strong> a pseudonymous Apple user identifier to recognise the parent account. I
-      do not store an email address. Apple is independently responsible for the sign-in itself.</li>
+    <li><strong>Sign in with Apple:</strong> a pseudonymous Apple user identifier to recognise the parent account.
+      The app does not request a name or email address from Apple, and I store neither. Apple is independently
+      responsible for the sign-in itself.</li>
     <li><strong>Family data:</strong> family name, first names or nicknames and school year of the children, chosen
       avatars and appearance, tasks, schedules, coin entries, rewards, savings goals and reminders. This data is
       stored as an event log so that all devices have the same state.</li>
@@ -65,15 +69,18 @@
       parents (30 days by default).</li>
     <li><strong>Devices:</strong> a random device identifier, a device name, a session key and, if notifications are
       allowed, a push notification token.</li>
-    <li><strong>Connection data:</strong> the IP address is stored for at most about two hours to protect against
-      abuse (rate limiting, in particular during pairing). Technical logs of the hosting provider are deleted
-      automatically after a short time.</li>
+    <li><strong>Connection data:</strong> to protect against abuse (rate limiting, in particular during
+      pairing) I do not store the IP address in plain text, only as a check value derived with a secret key, and for
+      at most about two hours. Technical logs of the hosting provider are deleted automatically after a short
+      time.</li>
   </ul>
   <p>The legal basis is the performance of a contract (Art. 6(1)(b) GDPR) and, for abuse prevention, my legitimate
   interest in secure operation (Art. 6(1)(f) GDPR). For children under 16, the parents act as holders of parental
   responsibility; children’s devices are set up and paired by parents only.</p>
-  <p>I store the family account data for as long as the family account exists. When it is deleted, I remove all data
-  including photos without delay.</p>
+  <p>I store the family account data for as long as the family account exists. When it is deleted (“Delete family
+  account”), I remove all data including photos, devices and sign-ins without delay. Another parent can use “Delete
+  my account” at any time to delete only their own sign-in and devices; the family account stays for the others. In
+  both cases I also revoke the connection to the Apple ID with Apple.</p>
 
   <h2>5. Hosting</h2>
   <p>The family account is operated by Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA (Cloudflare
@@ -123,8 +130,8 @@
   access. There is no automated decision-making and no profiling.</p>
 
   <h2>11. Your rights</h2>
-  <p>In the parent area, parents can delete individual photos, reset content, export data, remove devices and delete
-  the family account completely at any time. You also have the right of access, rectification, erasure, restriction
+  <p>In the parent area, parents can delete individual photos, reset content, export data, remove devices, delete
+  their own account and delete the family account completely at any time. You also have the right of access, rectification, erasure, restriction
   of processing, data portability and objection (Art. 15 to 21 GDPR). An email to
   <a href="mailto:hankanton.apps@gmx.de">hankanton.apps@gmx.de</a> is enough. You can lodge a complaint with a data
   protection supervisory authority, for example the Bavarian Data Protection Authority (BayLDA), Promenade 18,
