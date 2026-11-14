@@ -30,7 +30,10 @@ body {
   color: var(--text);
   font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
 }
-main, header.site, footer.site { max-width: 720px; margin: 0 auto; padding: 0 16px; }
+main, header.site, .video { margin: 20px 0; }
+.video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 14px; background: #0d4a32; }
+.video figcaption { font-size: 15px; color: var(--muted); margin-top: 8px; }
+footer.site { max-width: 720px; margin: 0 auto; padding: 0 16px; }
 header.site { padding-top: 20px; font-size: 15px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 header.site a { color: var(--muted); text-decoration: none; }
 header.site a:hover { color: var(--accent); }
