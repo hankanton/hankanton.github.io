@@ -17,16 +17,17 @@
 <main>
   <h1>Privacy policy</h1>
   <p class="muted">for the app “Lerntaler: Chores &amp; Rewards” (iPhone, iPad) and this website ·
-  Last updated: <!-- STAND -->6 November 2026</p>
+  Last updated: <!-- STAND -->14 November 2026</p>
   <p class="small muted">This is a translation for convenience. The <a href="../datenschutz.html" lang="de">German
   version</a> is authoritative.</p>
 
   <div class="card">
-    <p><strong>In short:</strong> Without a family account, all data stays on your device; I receive nothing. Only
-    if you choose to create a family account to connect several devices is the family data stored on a server in the
-    EU. Photos are encrypted beforehand and cannot be read by me. Children do not have an account of their own. There
-    are no ads, no tracking and no analytics. The family account is part of the “Lerntaler Plus” subscription, which
-    is purchased through Apple.</p>
+    <p><strong>In short:</strong> Without a family account, all data stays on your device. If you want to connect
+    several devices, you use the family account, which is part of the “Lerntaler Plus” subscription: the family is
+    then stored in your own iCloud with Apple and shared with the devices you connect. There is no server of my own
+    and no separate sign-in; I have no access to this data and do not receive it. Photos are additionally end-to-end
+    encrypted. Children do not have an account of their own. There are no ads, no tracking and no analytics. I only
+    receive data if you send me an email.</p>
   </div>
 
   <h2>1. Controller</h2>
@@ -49,122 +50,96 @@
   photos and settings – is stored only on the device. No data is transferred to me. The app schedules reminders
   locally on the device.</p>
   <p>Like all app data, this data is part of the device backup (iCloud backup or backup on a computer) if you use it
-  in the iOS settings; Apple’s terms apply. The session key, photo key and recovery code, however, are kept in the
-  keychain of this device only and are not backed up.</p>
+  in the iOS settings; Apple’s terms apply. The photo key and recovery code, however, are kept in the keychain of
+  this device only and are not backed up.</p>
   <p>I have no access to this data; I neither receive nor process it. The app stores it on your device because this
   is strictly necessary for the function you requested (§ 25(2) no. 2 TDDDG).</p>
-  <p>The app only uses the camera and photo library when you take or choose a photo yourself or scan a pairing code.
-  Face ID is optional and checked by the operating system; the app receives no biometric data. The microphone is not
-  used.</p>
+  <p>The app only uses the camera and photo library when you take or choose a photo yourself or scan a QR code to
+  connect a device. The app only asks for this permission during setup by the parents or behind the parent PIN; the
+  children’s area never asks for permissions. Face ID is optional and checked by the operating system; the app
+  receives no biometric data. The microphone is not used.</p>
 
-  <h2>4. Family account (several devices, Lerntaler Plus)</h2>
-  <p>If you want to use Lerntaler on several devices, you subscribe to “Lerntaler Plus” and can choose to create a
-  family account. For this I process:</p>
+  <h2>4. Family account via iCloud (several devices, Lerntaler Plus)</h2>
+  <p>If you want to use Lerntaler on several devices, you subscribe to “Lerntaler Plus” and can choose to connect
+  the family to iCloud (parent area → Settings → Devices &amp; account → “Connect with iCloud”). Then:</p>
   <ul>
-    <li><strong>Subscription status:</strong> so that Plus applies to all of the family’s devices, the app reports the
-      purchase’s transaction identifier to the server, and the server checks the subscription directly with Apple; Apple reports renewals, cancellations and refunds to the
-      server directly (App Store Server Notifications). Product, term, status and Apple’s transaction identifier are
-      stored – no names and no payment details.</li>
-    <li><strong>Sign in with Apple:</strong> a pseudonymous Apple user identifier to recognise the parent account.
-      The app does not request a name or email address from Apple, and I store neither. Apple is independently
-      responsible for the sign-in itself.</li>
+    <li><strong>Where the data is stored:</strong> the family is stored in the private iCloud database (CloudKit) of
+      the parent who connects it and uses that parent’s iCloud storage. From there it is shared via iCloud sharing
+      with the Apple IDs of the devices you connect by QR code, for example the child’s device or the second parent’s
+      device. Every device needs an Apple ID with iCloud and iCloud Drive for this, including the child’s device; a
+      child account in Apple’s Family Sharing is enough.</li>
+    <li><strong>No server of my own, no separate sign-in:</strong> there is no Lerntaler account, no password and no
+      email address. The devices sync directly via iCloud. I have no access to this data and receive none of it.</li>
     <li><strong>Family data:</strong> family name, first names or nicknames and school year of the children, chosen
-      avatars and appearance, tasks, schedules, coin entries, rewards, savings goals and reminders. This data is
-      stored as an event log so that all devices have the same state.</li>
+      avatars and appearance, tasks, schedules, coin entries, rewards, savings goals and reminders, as well as the
+      device names for the device list. This data is stored as an event log so that all devices have the same
+      state.</li>
     <li><strong>Photos:</strong> task, memory and avatar photos are optional. They are resized on the device, stored
-      without location data and <strong>end-to-end encrypted before transfer</strong>. The key is only on the
-      family’s devices; I cannot view the photos. Task photos are deleted automatically after the period chosen by the
-      parents (30 days by default).</li>
-    <li><strong>Devices:</strong> a random device identifier, a device name, a session key and, if notifications are
-      allowed, a push notification token. Sessions expire after 180 days without use.</li>
-    <li><strong>Connection data:</strong> to protect against abuse (rate limiting, in particular during
-      pairing) I do not store the IP address in plain text, only as a check value derived with a secret key, and for
-      at most about two hours. Technical logs of the hosting provider are deleted automatically after a short
-      time.</li>
+      without location data and <strong>additionally end-to-end encrypted</strong> (AES-GCM) before upload. The app
+      stores the photo key as an end-to-end encrypted iCloud field in the family, which only the family’s Apple IDs
+      can read. If iCloud ever fails to provide the key, the recovery code unlocks the photos. I cannot view the
+      photos. Task photos are deleted automatically after the period chosen by the parents (30 days by default),
+      in iCloud too.</li>
+    <li><strong>Subscription status:</strong> so that Plus applies to all connected devices, a parent device stores
+      the subscription status confirmed by Apple (StoreKit) in the family in iCloud: product, term, whether it is a
+      free trial and whether the subscription renews. Names and payment details are not included. There is no server
+      that checks purchases.</li>
   </ul>
-  <p><strong>Where the data comes from.</strong> I do not receive your children’s data from the children themselves but
-  from you as parents: you create the profiles, tasks and rewards. What children enter on paired devices (e.g. a
-  completed task or a photo) also becomes part of the family account.</p>
-  <p><strong>Legal bases.</strong></p>
-  <ul>
-    <li><em>Your own data as a parent</em> (Apple user identifier, devices, subscription status): performance of the
-      contract for Lerntaler and Lerntaler Plus (Art. 6(1)(b) GDPR).</li>
-    <li><em>Your children’s data</em> (first name or nickname, school year, avatars, tasks, coins, rewards, savings
-      goals, photos, children’s devices): legitimate interests (Art. 6(1)(f) GDPR). There is no contract with the
-      children themselves. The legitimate interest is providing the service you chose and your interest as parents in
-      organising tasks and rewards in your family across several devices; it matches your children’s interest in
-      getting recognition for what they have done. To protect children: no ad banners, no tracking, no profiling, no
-      account and no contact features for children, minimal data, encrypted photos and deletion by you at any time. I
-      do not ask for consent from or for the children.</li>
-    <li><em>Subscription status:</em> performance of the contract (Art. 6(1)(b) GDPR); assigning a purchase to one
-      family only also serves abuse prevention (Art. 6(1)(f) GDPR).</li>
-    <li><em>Push notifications:</em> Art. 6(1)(b) for parent devices, Art. 6(1)(f) GDPR for children’s devices (as
-      above).</li>
-    <li><em>Connection data and rate limiting:</em> my legitimate interest in secure operation (Art. 6(1)(f)
-      GDPR).</li>
-  </ul>
-  <p>Children’s devices are set up and paired by parents only. When creating the family account you confirm that you
-  have parental responsibility for the children or act with the consent of those who do.</p>
-  <p><strong>Obligation to provide data.</strong> You are under no legal or contractual obligation to create a family
+  <p><strong>iCloud.</strong> iCloud is an Apple service that you use with your Apple ID. The iCloud terms and
+  conditions and <a href="https://www.apple.com/uk/legal/privacy/">Apple’s privacy policy</a> apply; Apple is
+  independently responsible for it. I neither receive nor process the family account data. The app stores it on your
+  devices and in your iCloud because this is necessary for the function you requested.</p>
+  <p>Children’s devices are set up and connected by parents only. When connecting to iCloud you confirm that you
+  have parental responsibility for the children in this family or act with the consent of those who do.</p>
+  <p><strong>Obligation to provide data.</strong> You are under no legal or contractual obligation to use a family
   account or provide data. Without a family account Lerntaler works on one device; only syncing several devices is
   then not possible. Photos are always optional.</p>
-  <p><strong>Storage period.</strong></p>
+  <p><strong>How long the data stays in iCloud</strong> is up to you:</p>
   <ul>
-    <li><em>While Lerntaler Plus is active,</em> I store the family account data for as long as it exists.</li>
-    <li><em>End of Lerntaler Plus:</em> if the subscription ends (including a grace period from Apple), the family
-      account stays for another 90 days so that you can resume Plus without losing data; after that I delete all
-      family account data including photos and subscription status automatically. The app shows the deletion date in
-      the parent area. The data on your devices stays.</li>
-    <li><em>No use:</em> if no device of the family has connected for twelve months and Plus is not active, I delete
-      the family account automatically. Parent accounts without a family are deleted after twelve months without
-      sign-in.</li>
-    <li><em>Deletion by you:</em> “Delete family account” immediately removes all data including photos, devices,
-      sign-ins and subscription status. “Delete my account” removes only your sign-in and your devices; the family
-      account stays for the others. In both cases I also revoke the connection to the Apple ID with Apple.</li>
-    <li><em>Task photos</em> are deleted after the chosen period (30 days by default), memory and avatar photos when
-      you delete them.</li>
+    <li><em>End of Lerntaler Plus:</em> syncing rests. The data stays on the devices and in iCloud; changes wait and
+      are passed on as soon as Plus is active again. I do not delete anything, as I have no access to the data.</li>
+    <li><em>“Delete family account”</em> (Settings → Devices &amp; account; only for the parent who created the
+      family) immediately deletes the family including photos from their own iCloud. The other devices lose the
+      connection; the data on the device stays.</li>
+    <li><em>“Leave family”</em> (second parent): this device leaves the family; the family stays for the others and
+      the data on the device stays.</li>
+    <li><em>“Disconnect this device”</em> ends a device’s connection; the data stays on the device. Devices can also
+      be removed in the device list under Devices &amp; account.</li>
+    <li><em>Task photos</em> are deleted after the chosen period (30 days by default), in iCloud too; memory and
+      avatar photos when you delete them.</li>
+    <li><em>iOS settings:</em> you can also delete the Lerntaler data in the iOS settings via the management of
+      your iCloud storage.</li>
   </ul>
 
-  <h2>5. Hosting</h2>
-  <p>The family account is operated by Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA (Cloudflare
-  Workers, D1 and R2) as a processor, with family data and photos stored in the European Union. This is based on
-  Cloudflare’s data processing agreement. As Cloudflare routes requests through a global network, transfers to the
-  USA may occur; these are based on the European Commission’s adequacy decision for the EU-US Data Privacy
-  Framework, under which Cloudflare is certified, and additionally on standard contractual clauses; for users in Switzerland the Swiss-U.S. Data Privacy Framework
-  applies accordingly. Cloudflare processes requests at the nearest location of its network, so when travelling also
-  outside the EU. The detailed
-  guide is delivered by the same server; the information on connection data applies.</p>
+  <h2>5. Notifications</h2>
+  <p>With a family account, parent devices receive short notices such as “New task to approve” or “New reward
+  request”, and children’s devices receive notices such as “Task approved” or “Redemption confirmed”, if notifications
+  are allowed. For this, iCloud informs the connected devices of new entries with a silent notification via Apple.
+  The app then reads the news from iCloud itself and shows a notification on the device; the notices contain no
+  children’s names. I receive no device token and no content, and no third-party push service is involved. iOS
+  delivers silent notifications without guarantee, often with a delay. Notifications can be turned off at any time
+  in the iOS settings.</p>
+  <p>Task reminders and the end of a timer are scheduled locally on the device; no data is transferred for
+  them.</p>
 
-  <h2>6. Push notifications</h2>
-  <p>If notifications are allowed, parent devices receive short notices such as “New task to approve” or “New reward
-  request”; children’s devices receive notices such as “Task approved” or “Redemption confirmed”, each with the name
-  of the task or reward. The notices contain no children’s names. They are delivered via the Apple Push Notification service. For delivery I
-  use the push service of Expo (650 Industries, Inc., USA) as a processor; it processes the device token and the
-  notification text and stores them only as long as needed for delivery. Under its terms Expo may also use data in
-  aggregated or de-identified form for its own purposes (improving its services) and is a controller to that
-  extent. Expo is
-  certified under the EU-US Data Privacy Framework; the transfer to the USA is based on this and on the European
-  Commission’s standard contractual clauses, for users in Switzerland on the Swiss-U.S. Data Privacy Framework.
-  Notifications can be turned off at any time in the iOS settings; then no
-  token is reported.</p>
-  <p>Task reminders are scheduled locally on the device; no data is transferred for them.</p>
-
-  <h2>7. App Store and Apple</h2>
+  <h2>6. App Store and Apple</h2>
   <p>Lerntaler is distributed through Apple’s App Store. Apple is responsible for downloads, updates and ratings;
   Apple’s privacy policy applies. “Rate Lerntaler” only opens the App Store page. Apple provides me with anonymised
   download statistics and, if you have agreed to share with developers, crash reports. I cannot identify individual
   people from them.</p>
   <p>Apple handles the purchase, payment, free trial, Family Sharing, cancellation and refunds of “Lerntaler Plus”
-  under its own responsibility. From Apple I only receive the purchase confirmation (see section 4) and aggregated
-  sales figures, but no names, contact details or payment details.</p>
+  under its own responsibility. The app checks on the device via StoreKit whether a subscription exists. From Apple I
+  only receive aggregated sales figures, but no names, contact details or payment details.</p>
 
-  <h2 id="contact">8. Feedback by email</h2>
-  <p>If you write to me via “Send feedback” or directly by email, you send me your email address, the content and,
-  with “Send feedback”, the attached app and operating system version. I use them only to reply (Art. 6(1)(b) or (f)
-  GDPR) and delete them once the matter is closed and no retention obligation applies. Please do not send photos of
-  your children by email.</p>
+  <h2 id="contact">7. Feedback by email</h2>
+  <p>“Send feedback” (parent area → Settings → App) opens your own email app with a prepared message to me that
+  contains the app version and iOS version; it is only sent when you tap Send yourself. If you write to me this way
+  or directly by email, you send me your email address, the content and, where applicable, this information. Apart
+  from Apple’s statistics (section 6), this is the only way I receive data. I use it only to reply (Art. 6(1)(b) or
+  (f) GDPR) and delete it once the matter is closed and no retention obligation applies. Please do not send photos
+  of your children by email.</p>
 
-  <h2>9. This website</h2>
+  <h2>8. This website</h2>
   <p>This website is provided via GitHub Pages, a service of GitHub, Inc., 88 Colin P. Kelly Jr. Street,
   San Francisco, CA 94107, USA. When you visit it, GitHub processes technically necessary data such as your IP
   address, the date and time of access and the page requested, in order to deliver the page and protect the service
@@ -174,33 +149,43 @@
   <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub’s privacy
   statement</a>.</p>
   <p>This website sets no cookies, uses no analytics or tracking services and loads no content from other servers
-  (not even fonts).</p>
+  (not even fonts). The explainer videos on the help page are this website’s own files and are also delivered via
+  GitHub Pages, without third-party services.</p>
 
-  <h2>10. No sharing</h2>
-  <p>Data is not sold to third parties or used for advertising. Apart from the processors named above, nobody has
-  access. There is no automated decision-making and no profiling.</p>
+  <h2>9. No sharing</h2>
+  <p>I do not sell data or use it for advertising. Lerntaler contains no ads, no tracking, no analytics and no
+  third-party components (SDKs) that collect data. There is no automated decision-making and no profiling.</p>
 
-  <h2>11. Your rights</h2>
-  <p>In the parent area, parents can delete individual photos, reset content, export data, remove devices, delete
-  their own account and delete the family account completely at any time. You also have the right of access, rectification, erasure, restriction
-  of processing, data portability and objection (Art. 15 to 21 GDPR). An email to
-  <a href="mailto:hankanton.apps@gmx.de">hankanton.apps@gmx.de</a> is enough.</p>
+  <h2>10. Your rights</h2>
+  <p>In the parent area, parents can delete individual photos, reset content, export data, remove devices, leave the
+  family and delete the family account completely at any time. Where I process personal data, for example your
+  emails, you also have the right of access, rectification, erasure, restriction of processing, data portability
+  and objection (Art. 15 to 21 GDPR). An email to <a href="mailto:hankanton.apps@gmx.de">hankanton.apps@gmx.de</a>
+  is enough. You manage the data in your iCloud yourself in the app and in the iOS settings; for iCloud itself,
+  Apple is your point of contact.</p>
   <div class="card">
     <p><strong>Right to object.</strong> Where I process data on the basis of legitimate interests (Art. 6(1)(f)
-    GDPR) – in particular your children’s data and connection data – you can object at any time on grounds relating to
-    your particular situation; you exercise this right for your children as their parents. The easiest way is to
-    delete the family account or individual content in the parent area; an email to
-    <a href="mailto:hankanton.apps@gmx.de">hankanton.apps@gmx.de</a> is also enough.</p>
+    GDPR) – this concerns feedback by email and the operation of this website – you can object at any time on grounds
+    relating to your particular situation. An email to
+    <a href="mailto:hankanton.apps@gmx.de">hankanton.apps@gmx.de</a> is enough.</p>
   </div>
   <p>You can lodge a complaint with a data protection supervisory authority, for example the Bavarian Data
   Protection Authority (BayLDA), Promenade 18, 91522 Ansbach, Germany. Users in Switzerland can contact the Federal
   Data Protection and Information Commissioner (FDPIC).</p>
 
-  <h2 id="children">12. Explained for children</h2>
+  <h2 id="children">11. Explained for children</h2>
   <p>Lerntaler stores your name or nickname, your tasks, your coins and your wishes. Only your family and the devices
-  your parents connected can see them. Nobody else can write to you here, and there are no ads. Photos are optional.
-  They are encrypted so that only your family’s devices can show them. If there is something you don’t want or you
-  have a question, tell your parents – they can change or delete everything.</p>
+  your parents connected can see them. If several devices are connected, everything is kept in your parents’ iCloud.
+  Nobody else can write to you here, and there are no ads. Photos are optional. They are encrypted so that only your
+  family’s devices can show them. If there is something you don’t want or you have a question, tell your parents –
+  they can change or delete everything.</p>
+
+  <h2>12. Earlier test versions</h2>
+  <p>Earlier test versions of Lerntaler (TestFlight) synced the family account via a server of my own at
+  Cloudflare. It held the family data, encrypted photos, a pseudonymous identifier from “Sign in with Apple” and
+  device data. The test families are moving to iCloud; after that I will delete the family accounts on this server
+  and shut it down. With the App Store version of Lerntaler, nobody creates an account on this server any more. I am
+  happy to answer questions about this by email; on request I will also delete such a test account sooner.</p>
 
   <h2>13. Changes</h2>
   <p>If the app or the services involved change, I will update this policy. The version published here

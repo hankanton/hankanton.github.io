@@ -37,8 +37,8 @@
 
   <div class="card">
     <p><strong>Free, no ad banners, no tracking.</strong> Lerntaler has no ad banners and no analytics. Without a
-    family account, all data stays on the device. The family account for several devices and some extra features
-    come with the “Lerntaler Plus” subscription; photos are encrypted before they are transferred. More in the
+    family account, all data stays on the device. The family account for several devices (via your own iCloud) and
+    some extra features come with the “Lerntaler Plus” subscription; photos are additionally encrypted. More in the
     <a href="privacy.html">privacy policy</a>.</p>
   </div>
 
@@ -55,15 +55,27 @@
   </ol>
 
   <h3>Do I need an account?</h3>
-  <p>No. On a single device Lerntaler works without any account. You only need a family account if several devices
-  should share the same data, for example the parent’s iPhone and the child’s iPad; it is part of Lerntaler Plus.
-  You sign in with “Sign in with Apple”; children do not have an account of their own.</p>
+  <p>No. Lerntaler has no sign-in and no account of its own, not for children either. On a single device everything
+  just works. If several devices should share the same data, for example the parent’s iPhone and the child’s iPad,
+  you need Lerntaler Plus and iCloud: every device must be signed in to iCloud with an Apple ID and have iCloud Drive
+  turned on, including the child’s device. A child account in Apple’s Family Sharing is enough.</p>
 
   <h3>How do I connect my child’s device?</h3>
   <p>On the parent device: parent area → <strong>Settings</strong> → <strong>Devices &amp; account</strong> →
-  “Sign in with Apple” (the family is then moved into the family account), then “Pair child device” and choose the child. On the child’s device,
-  install Lerntaler, choose “Join a family” and scan the QR code. The QR code also transfers the key for photos. A
-  second parent joins via “Invite second parent”.</p>
+  tick the confirmation of parental responsibility → “Connect with iCloud” (the family is then moved into your
+  iCloud). Then “Pair child device” and choose the child (or “All children” for a shared device); a QR code appears.
+  On the child’s device, install Lerntaler, choose “This device belongs to an existing family” on the start screen and
+  scan the QR code. The device gets the key for photos from iCloud. A second parent connects the same way via “Invite
+  second parent”. Only show the QR codes to your own devices.</p>
+  <p>Notifications on the child’s device: <strong>Switch profile</strong> → <strong>Device settings</strong> (parent
+  PIN) → “Allow notifications”. The child is never asked for permissions.</p>
+
+  <h3>New iPhone or reinstalled Lerntaler?</h3>
+  <p>The parent who created the family installs Lerntaler, chooses “This device belongs to an existing family” on
+  the start screen and then <strong>“Load family from iCloud”</strong>. The iPhone must be signed in to iCloud with
+  the same Apple ID. No QR code is needed, it also works without an active Plus subscription, and the key for photos
+  comes from iCloud too. A child’s device or the second parent’s device is connected again as the first time: show
+  the QR code on the parent device and scan it.</p>
 
   <h3>I forgot the parent PIN.</h3>
   <p>Tap “Forgot PIN?” when entering the PIN and enter the recovery code you wrote down during setup. Then choose a
@@ -85,13 +97,30 @@
 
   <h3>What happens to photos?</h3>
   <p>Photos are always optional. They are resized on the device and stored without location data. With a family
-  account they are encrypted before transfer; the key is only on the family’s devices. Task photos are deleted after
-  the period you set (30 days by default); memory photos in the album stay.</p>
+  account they are additionally end-to-end encrypted before they are uploaded to iCloud; only your family’s devices
+  can read them. Task photos are deleted after the period you set (30 days by default), in iCloud too; memory photos
+  in the album stay.</p>
 
-  <h3>Notifications don’t arrive.</h3>
-  <p>Allow notifications in the parent area under <strong>Settings → Reminders &amp; notifications</strong> and in
-  the iOS settings. Lerntaler also shows there whether the device is registered for push notifications. Push
-  notifications between devices require a family account (Lerntaler Plus).</p>
+  <h3>Notifications arrive late or not at all.</h3>
+  <p>Notifications between devices come with the family account (Lerntaler Plus). Check on every device:</p>
+  <ul>
+    <li><strong>Notifications allowed:</strong> on the parent device under Settings → Reminders &amp; notifications,
+      on the child’s device under Switch profile → Device settings → “Allow notifications”, and in the iOS settings
+      under Notifications → Lerntaler.</li>
+    <li><strong>Background App Refresh:</strong> turn on iOS Settings → General → Background App Refresh, and for
+      Lerntaler there too. Without it, notifications only arrive once Lerntaler is opened. Lerntaler then shows a
+      notice with “Open Settings”.</li>
+    <li><strong>Low Power Mode:</strong> it turns off Background App Refresh automatically.</li>
+  </ul>
+  <p>Even when everything is set up correctly, notifications often arrive with a delay, sometimes only after a few
+  minutes and several at once. iCloud delivers them as “silent” notifications whose timing iOS decides itself
+  (depending on battery, usage and network). When you open the app, everything is up to date straight away.</p>
+
+  <h3>Where is our data stored?</h3>
+  <p>Without a family account, only on the device. With a family account, also in the iCloud of the parent who
+  connected the family (it uses their iCloud storage), shared with your connected devices; photos are additionally
+  end-to-end encrypted. There is no Lerntaler server, and the developer has no access to your data. More in the
+  <a href="privacy.html">privacy policy</a>.</p>
 
   <h3>How do I back up or delete data?</h3>
   <ul>
@@ -99,11 +128,16 @@
     <li><strong>Delete a child:</strong> Settings → Children → child → “Delete child”. For 30 days it can be
       restored under “Recently deleted”.</li>
     <li><strong>Start over:</strong> Settings → Data &amp; privacy → “Reset everything” deletes tasks, rewards,
-      piggy banks, coins and album; children, PIN and account stay.</li>
-    <li><strong>Delete the family account:</strong> Settings → Devices &amp; account → “Delete family account”
-      removes all data from the server.</li>
-    <li><strong>Delete your own account (second parent):</strong> Settings → Devices &amp; account → “Delete my
-      account” removes your own sign-in and devices; the family stays for the others.</li>
+      piggy banks, coins and album on all connected devices; children, PIN and connection stay.</li>
+    <li><strong>Delete the family account</strong> (only the parent who created the family): Settings → Devices
+      &amp; account → “Delete family account” immediately deletes the family including photos from your iCloud. The
+      other devices lose the connection; the data on this device stays.</li>
+    <li><strong>Leave the family (second parent):</strong> Settings → Devices &amp; account → “Leave family”; the
+      family stays for the others.</li>
+    <li><strong>Disconnect a device:</strong> Settings → Devices &amp; account → “Disconnect this device” ends the
+      connection; the data stays on the device.</li>
+    <li><strong>Data in iCloud:</strong> you can also delete the Lerntaler data in the iOS settings via the
+      management of your iCloud storage.</li>
   </ul>
 
   <h3>What does Lerntaler cost?</h3>
@@ -111,12 +145,13 @@
   avatars. The <strong>Lerntaler Plus</strong> subscription adds the family account for several devices, the weekly
   review, study plans, the family challenge and the looks “Night shift”, “Streak” and “Notebook”. It is monthly or
   yearly, with the first 14 days free (paid afterwards) and Family Sharing;
-  the App Store shows the price in your currency. Subscribe, “Restore purchases” and “Redeem code”: parent area →
+  the App Store shows the price in your currency. In the family account, Plus applies to all connected devices; the
+  child and the second parent do not need a subscription of their own. Subscribe, “Restore purchases” and “Redeem code”: parent area →
   <strong>Settings → Lerntaler Plus</strong>. Cancel: iOS Settings → your name → Subscriptions.</p>
 
   <h2>Contact</h2>
   <p>Questions, bugs or wishes: the easiest way is in the app under <strong>Settings → App → “Send
-  feedback”</strong>, which adds the app and iOS version. Or by email to
+  feedback”</strong>, which opens your email app with the app and iOS version already filled in. Or by email to
   <a href="mailto:hankanton.apps@gmx.de?subject=Lerntaler">hankanton.apps@gmx.de</a> (English or German). It helps
   to mention the device, the steps and what you expected.</p>
 </main>
